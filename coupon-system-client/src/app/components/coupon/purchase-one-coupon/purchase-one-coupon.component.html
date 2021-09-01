@@ -1,0 +1,53 @@
+<div class="main-container">
+  <div class="header-container">
+    <h2>Purchase Coupon</h2>
+  </div>
+  <div class="data-type-container">
+    <div class="row">
+      <label for="amount_input">Category: </label>
+      <div class="coupon-data-row">{{ cat }}</div>
+    </div>
+    <div class="row">
+      <label for="title_input">Title: </label>
+      <div class="coupon-data-row">{{ title }}</div>
+    </div>
+    <div class="row">
+      <label for="amount_input">Description: </label>
+      <div class="coupon-data-row">{{ desc }}</div>
+    </div>
+    <div class="row">
+      <label for="amount_input">Amount: </label>
+      <div class="coupon-data-row">{{ amount }}</div>
+    </div>
+  </div>
+
+  <div class="date-container">
+    <div class="coupon-data-row">
+      Available From
+      <span class="date-class">
+        {{ start | date }}
+      </span>
+      To
+      <span class="date-class">
+        {{ end | date }}
+      </span>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <div class="row">
+      <button
+      [disabled]="(!isExpired() || !isInStock())"
+        class="btn-buy"
+        name="btn-buy"
+        id="btn-buy"
+        (click)="purchaseCoupon()">
+      <span *ngIf="isExpired() && isInStock();else unavailable "> Price: {{price}}$ </span>
+      <ng-template #unavailable>
+        <span > Coupon unavailable!  </span>
+       </ng-template> 
+      </button>
+      <button (click)="goBack()" class="btn-no" name="btn-no" id="btn-no">No Thanks!</button>
+    </div>
+  </div>
+</div>

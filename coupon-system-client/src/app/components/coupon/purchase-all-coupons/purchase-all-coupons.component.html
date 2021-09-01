@@ -1,0 +1,41 @@
+<div class="header-container">
+  <h2>Coupons</h2>
+</div>
+<ng-template #loading>
+  <img
+    src="../../../assets/gifs/loading-buffering1.gif"
+    alt="buffering image"
+  />
+</ng-template>
+
+<div class="table-container">
+  <table *ngIf="coupons; else loading">
+    <thead class="thead-style">
+      <tr>
+        <th>Id</th>
+        <th>Cat</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Start Date</th>
+        <th>Expiration Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let c of coupons"     
+        routerLink="/welcome/purchase-one-coupon/{{c.id}}"    
+      >
+        <td>{{ c.id }}</td>
+        <td>{{ c.category }}</td>
+        <td>{{ c.title }}</td>
+        <td>{{ c.description }}</td>
+        <td>{{ c.amount }}</td>
+        <td>{{ c.price }}</td>
+        <td>{{ c.startDate | date }}</td>
+        <td>{{ c.endDate | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

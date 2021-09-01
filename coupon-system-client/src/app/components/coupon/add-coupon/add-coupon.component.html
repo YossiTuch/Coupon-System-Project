@@ -1,0 +1,130 @@
+<div class="main-container">
+  <form #formInfo="ngForm" action="">
+    <div class="header-container">
+      <h2>Add Coupon</h2>
+    </div>
+    <div class="cat-container">
+      <div class="row">
+        <label for="cat_input">Category: </label>
+        <div class="select-container">
+          <select
+            required
+            #categoryType
+            name="select-category"
+            class="select-category"
+            id="select-category"
+          >
+            <option name="FOOD" value="FOOD">Food</option>
+            <option name="ELECTRICITY" value="ELECTRICITY">Electricity</option>
+            <option name="RESTAURANTS" value="RESTAURANTS">Restaurants</option>
+            <option name="CAMPING" value="CAMPING">Camping</option>
+            <option name="TRAVEL" value="TRAVEL">Travel</option>
+            <option name="CLOTHING" value="CLOTHING">Clothing</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="add_coupon_left_container">
+      <div class="row">
+        <label for="title_input">Title: </label>
+        <input
+          required
+          #inputTitle
+          type="text"
+          name="coupon-title"
+          class="input-coupon"
+          placeholder="Title"
+          id="title_input"
+        />
+      </div>
+      <div class="row">
+        <label for="description_input">Description: </label>
+        <input
+          required
+          #inputDescription
+          type="text"
+          name="coupon-description"
+          class="input-description"
+          placeholder="Description"
+          id="description_input"
+        />
+      </div>
+      <div class="row">
+        <label for="start-date_input">Start Date: </label>
+        <input
+          required
+          type="date"
+          name="coupon-start-date"
+          class="input-start-date"
+          id="start-date_input"
+          [(ngModel)]="startDate"
+        />
+      </div>
+    </div>
+    <div class="add_coupon_right_container">
+      <div class="row">
+        <label for="amount_input">Amount: </label>
+        <input
+          required
+          #inputAmount
+          type="number"
+          name="coupon-amount"
+          class="input-amount"
+          placeholder="Amount"
+          id="amount_input"
+          value="0"
+          [(ngModel)]="amount"
+        />
+      </div>
+      <div class="row">
+        <label for="price_input">Price: </label>
+        <input
+          required
+          #inputPrice
+          type="number"
+          name="coupon-price"
+          class="input-price"
+          placeholder="Price"
+          id="price_input"
+          value="0"
+          [(ngModel)]="price"
+        />
+      </div>
+
+      <div class="row">
+        <label for="end-date_input">End Date: </label>
+        <input
+          required
+          #inputEndDate
+          type="date"
+          name="coupon-end-date"
+          class="input-end-date"
+          id="end-date_input"
+          [(ngModel)]="endDate"
+        />
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="row">
+        <button
+          [disabled]="!formInfo.valid"
+          [textContent]="!formInfo.valid ? 'Invalid Form' : 'Add Coupon'"
+          class="btn-add"
+          name="btn-add"
+          id="btn-add"
+          (click)="
+            addCoupon(
+              categoryType.value,
+              inputTitle.value,
+              inputDescription.value
+            )
+          "
+        >
+          Add Coupon
+        </button>
+        <button class="reset" type="reset" name="" id="">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>

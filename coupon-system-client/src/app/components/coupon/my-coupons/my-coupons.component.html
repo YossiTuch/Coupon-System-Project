@@ -1,0 +1,88 @@
+<div class="header-container">
+    <h2>My Coupons</h2>
+  </div>
+  <ng-template #loading>
+    <img
+      src="../../../assets/gifs/loading-buffering1.gif"
+      alt="buffering image"
+    />
+  </ng-template>
+  
+  <div class="table-container-all">
+    <table *ngIf="coupons; else loading">
+      <thead class="thead-style">
+        <tr>
+          <th>Id</th>
+          <th>Cat</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Price</th>
+          <th>Start Date</th>
+          <th>Expiration Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let c of coupons">
+          <td>{{ c.id }}</td>
+          <td>{{ c.category }}</td>
+          <td>{{ c.title }}</td>
+          <td>{{ c.description }}</td>
+          <td>{{ c.amount }}</td>
+          <td>{{ c.price }}</td>
+          <td>{{ c.startDate | date }}</td>
+          <td>{{ c.endDate | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="buttons">
+    <div class="options-container">
+      <label for="title_input">Max Price:</label>
+      <input
+        [(ngModel)]="maxPrice"
+        type="number"
+        name="price_input"
+        class="price_input"
+        id="price_input"
+        value="0"
+      />
+      <div class="select-container">
+        <select
+          required
+          [(ngModel)]="category"   
+          name="select-category"
+          class="select-category"
+          id="select-category"
+        >
+          <option name="FOOD" value="FOOD">Food</option>
+          <option name="ELECTRICITY" value="ELECTRICITY">Electricity</option>
+          <option name="RESTAURANTS" value="RESTAURANTS">Restaurants</option>
+          <option name="CAMPING" value="CAMPING">Camping</option>
+          <option name="TRAVEL" value="TRAVEL">Travel</option>
+          <option name="CLOTHING" value="CLOTHING">Clothing</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <button
+        [ngStyle]="{'background-color' : (isMaxPriced)? 'gray' : '#e4b21e'}"
+        class="btn-add"
+        name="btn-add"
+        id="btn-add"
+        (click)="getCouponByMaxPrice()"
+      >
+        Max Price
+      </button>
+      <button
+        [ngStyle]="{'background-color' : (isCategorised)? 'gray' : '#e4b21e'}"
+        class="btn-add"
+        name="btn-add"
+        id="btn-add"
+        (click)="getCouponByCategory()"
+      >
+        Category
+      </button>
+    </div>
+  </div>
