@@ -1,0 +1,21 @@
+<div class="main-container">
+    <div class="login-box">
+        <h1>Login</h1>
+        <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Username" name="username" id="username" [(ngModel)]="user">
+        </div>
+        <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="password" placeholder="Password" name="password" id="password" [(ngModel)]="pass">
+        </div>
+        <div class="select-container">
+            <select #clientType name="client-type" class="select-client" id="client-type">
+                <option name="CUSTOMER" value="CUSTOMER">Customer</option>
+                <option name="COMPANY" value="COMPANY">Company</option>
+                <option name="ADMIN" value="ADMIN">Admin</option>
+            </select>
+        </div>
+        <input (click)="login(clientType.value)" class="btn" type="button" name="" id="" value="Sign in">
+    </div>
+</div>

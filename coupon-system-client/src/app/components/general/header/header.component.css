@@ -1,0 +1,13 @@
+div {
+    height: 100%;
+}
+
+h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 75px;
+    background-image: linear-gradient(to left bottom, #e4b21e, lightgray);
+    background-clip: text;
+    color: transparent;
+}

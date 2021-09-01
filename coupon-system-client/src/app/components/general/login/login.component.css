@@ -1,0 +1,104 @@
+@import"https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Monsterrat', sans-serif;
+    background-size: cover;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    background-color: #090821;
+}
+
+.login-box {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e4b21e;
+}
+
+.login-box h1 {
+    float: left;
+    font-size: 50px;
+    border-bottom: 6px solid white;
+    margin-bottom: 50px;
+    padding: 13px 0;
+    font-family: 'Monsterrat', sans-serif;
+}
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 12px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid white;
+}
+
+.textbox i {
+    width: 26px;
+    float: left;
+    text-align: center;
+    color: white;
+}
+
+.textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    color: #e4b21e;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+    background-color: #090821 !important;
+}
+
+.btn {
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 280px;
+    height: 30px;
+    border: 1px solid #e4b21e;
+    border-radius: 40px;
+    background: transparent;
+    color: #e4b21e;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: #e4b21e;
+    color: #090821;
+    transform: 0.5s;
+}
+
+.select-container {
+    text-decoration: transparent;
+    text-align: center;
+    width: 100%;
+}
+
+select {
+    text-align: center;
+    cursor: pointer;
+    font-size: 22px;
+    border: none;
+    outline: transparent;
+    background-color: transparent;
+    color: #e4b21e;
+}
+
+select>option {
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: #e4b21e;
+    background-color: #090821;
+}

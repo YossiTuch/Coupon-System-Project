@@ -1,0 +1,27 @@
+<div class="links-container">
+
+    <!-- Admin routes -->
+    <div class="admin-menu-container" *ngIf="getClientType()=='ADMIN'">
+        <a routerLink="all-companies" routerLinkActive="active-link">All Companies</a>
+        <a routerLink="add-company" routerLinkActive="active-link">Add Company</a>    
+        <a routerLink="find-company" routerLinkActive="active-link">Find Company</a>
+        <br><hr><br>
+        <a routerLink="all-customers" routerLinkActive="active-link">All Customer</a>
+        <a routerLink="add-customer" routerLinkActive="active-link">Add Customer</a>
+        <a routerLink="find-customer" routerLinkActive="active-link">Find Customer</a>
+    </div>
+    <!-- Company routes -->
+    <div class="company-menu-container" *ngIf="getClientType()=='COMPANY'">
+        <a routerLink="all-coupons" routerLinkActive="active-link">All Coupons</a>
+        <a routerLink="add-coupon" routerLinkActive="active-link">Add Coupon</a>
+        <a  routerLinkActive="active-link">Find Coupon</a>
+    </div>
+    <!-- Customer routes -->
+    <div class="customer-menu-container" *ngIf="getClientType()=='CUSTOMER'">
+        <a routerLink="my-coupons" routerLinkActive="active-link">My Coupon</a>      
+        <a routerLink="purchase-all-companies" routerLinkActive="active-link">Purchase Coupon</a>      
+    </div>
+</div>
+<div class="btn-logout">
+    <button class="logout-btn" (click)="logout()">Logout</button>
+</div>

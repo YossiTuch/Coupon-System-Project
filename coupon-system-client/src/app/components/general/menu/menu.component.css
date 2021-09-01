@@ -1,0 +1,56 @@
+:host {
+    height: 100%;
+    overflow: auto;
+    display: block;
+}
+
+.links-container {
+    height: 80%;
+}
+
+a {
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 4px 0;
+    color: #e4b21e;
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+div {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.active-link {
+    font-weight: bolder;
+    outline: auto;
+    color: white;
+    font-size: 26px;
+    outline: none;
+    border-radius: 20px;
+    background-color: transparent;
+    position: relative;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.logout-btn {
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 240px;
+    height: 65px;
+    border: 1px solid #e4b21e;
+    border-radius: 40px;
+    background: #e4b21e !important;
+    color: #090821;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.logout-btn:hover {
+    transform: scale(1.1);
+}
