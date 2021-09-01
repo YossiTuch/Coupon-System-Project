@@ -22,7 +22,7 @@ import app.core.services.AdminService;
 
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin
+@CrossOrigin("*")
 
 public class AdminController{
 

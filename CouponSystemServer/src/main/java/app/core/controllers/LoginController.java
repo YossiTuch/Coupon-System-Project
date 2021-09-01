@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/login")
-@CrossOrigin
+@CrossOrigin("*")
 public class LoginController {
 
     @Autowired

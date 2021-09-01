@@ -19,7 +19,7 @@ import app.core.services.CompanyService;
 
 @RestController
 @RequestMapping("/api/company")
-@CrossOrigin
+@CrossOrigin("*")
 public class CompanyController {
 
 	@Autowired
