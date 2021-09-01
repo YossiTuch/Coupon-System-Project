@@ -1,0 +1,44 @@
+<div class="main-container">
+    <div class="header-container">
+      <h2>Edit Company</h2>
+    </div>  
+    <div class="edit_company_container">
+      <form #formInfo="ngForm" action="">     
+        <div class="row">
+          <label for="email_input">Company Email: </label>
+          <input
+          required
+            #inputEmail
+            type="email"
+            name="company-email"
+            class="input-company-email"
+            value="{{company.email}}"
+            id="input-company-email"
+          />
+        </div>
+        <div class="row">
+            <label for="password_input">Company Password: </label>
+            <input
+            required
+              #inputPass
+              type="text"
+              name="company-password"
+              class="input-company-passowrd"
+              value="{{company.password}}"
+              id="input-company-password"
+            />
+          </div>
+        <div class="row">
+          <button
+          [disabled]="!formInfo.valid"
+          [textContent]="!formInfo.valid ? 'Invalid Form' : 'Update'"
+            class="btn-upd"
+            name="btn-upd"
+            id="btn-upd"          
+            (click)="update(inputEmail.value ,inputPass.value )">    
+            Update
+          </button>     
+        </div>
+      </form>
+    </div>
+  </div>

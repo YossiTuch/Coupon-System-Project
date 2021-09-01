@@ -1,0 +1,27 @@
+<div *ngIf="customer" class="customer-details-container">
+  <div class="bg-container">
+    <app-thumbnail class="thumbnail"></app-thumbnail>
+    <div class="details-container"></div>
+    <div class="id-con">Id: {{customer.id}}</div>
+    <div class="email-con">Email: {{customer.email}}</div>
+    <div class="name-con">{{customer.firstName}} {{customer.lastName}}</div> 
+  </div>
+</div>
+<div class="buttons">
+  <button
+  class="btn-upt"
+  name="btn-upt"
+  id="btn-upt"  
+  (click)="update()"  
+  >     
+  Edit
+</button>
+<button
+class="btn-del"
+name="btn-del"
+id="btn-del"
+(click)="delCustomer()"
+>   
+Delete
+</button>  
+</div>

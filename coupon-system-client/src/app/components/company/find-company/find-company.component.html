@@ -1,0 +1,32 @@
+<div class="main-container">
+    <div class="header-container">
+      <h2>Find Company</h2>
+    </div>
+  
+    <div class="find_company_container">
+      <form #formInfo="ngForm" action="">
+        <div class="row">
+          <label for="id_input">Company Id: </label>
+          <input
+            #inputId   
+            type="number"
+            name="company-id"
+            class="input-company-id"
+            placeholder="Id"
+            id="input-company-id"
+            value="0"
+          />
+        </div>
+        <div class="row">
+          <button
+            class="btn-add"
+            name="btn-add"
+            id="btn-add"          
+            (click)="goToDetails(inputId.value)">    
+            Find Company
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

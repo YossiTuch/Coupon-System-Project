@@ -1,0 +1,61 @@
+<div class="main-container">
+  <div class="header-container">
+    <h2>Add Company</h2>
+  </div>
+
+  <div class="add_company_container">
+    <form #formInfo="ngForm" action="">
+      <div class="row">
+        <label for="name_input">Company Name: </label>
+        <input
+          required
+          #inputName
+          type="text"
+          name="company-name"
+          class="input-company"
+          placeholder="Name"
+          id="name_input"
+        />
+      </div>
+      <div class="row">
+        <label for="email_input">Company Email: </label>
+        <input
+          required
+          #inputEmail
+          type="email"
+          name="company-email"
+          class="input-company"
+          placeholder="Email"
+          id="email_input"
+        />
+      </div>
+      <div class="row">
+        <label for="password_input">Company Password: </label>
+        <input
+          required
+          #inputPassword
+          type="password"
+          name="company-password"
+          class="input-company"
+          placeholder="Password"
+          id="password_input"
+        />
+      </div>
+      <div class="row">
+        <button
+          [disabled]="!formInfo.valid"
+          [textContent]="!formInfo.valid ? 'Invalid Form' : 'Add Company'"
+          class="btn-add"
+          name="btn-add"
+          id="btn-add"
+          (click)="
+            addCompany(inputName.value, inputEmail.value, inputPassword.value)
+          "
+        >
+          Add Company
+        </button>
+        <button class="reset" type="reset" name="" id="">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>

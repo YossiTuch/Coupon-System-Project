@@ -1,0 +1,77 @@
+<div class="main-container">
+  <div class="header-container">
+    <h2>Add Customer</h2>
+  </div>
+  <div class="add_customer_container">
+    <form #formInfo="ngForm" action="">
+      <div class="row">
+        <label for="first-name_input">First Name: </label>
+        <input
+        required
+          #inputFirstName
+          type="text"
+          name="customer-name"
+          class="input-customer"
+          placeholder="Name"
+          id="first-name_input"
+        />
+      </div>
+      <div class="row">
+        <label for="name_input">Last Name: </label>
+        <input
+        required
+          #inputLastName
+          type="text"
+          name="customer-name"
+          class="input-customer"
+          placeholder="Name"
+          id="name_input"
+        />
+      </div>
+      <div class="row">
+        <label for="email_input">Customer Email: </label>
+        <input
+        required
+          #inputEmail
+          type="email"
+          name="company-email"
+          class="input-company"
+          placeholder="Email"
+          id="email_input"
+        />
+      </div>
+      <div class="row">
+        <label for="password_input">Customer Password: </label>
+        <input
+        required
+          #inputPassword
+          type="password"
+          name="company-password"
+          class="input-company"
+          placeholder="Password"
+          id="password_input"
+        />
+      </div>
+      <div class="row">
+        <button
+        [disabled]="!formInfo.valid"
+        [textContent]="!formInfo.valid ? 'Invalid Form' : 'Add Customer'"
+          class="btn-add"
+          name="btn-add"
+          id="btn-add"
+          (click)="
+            addCustomer(
+              inputFirstName.value,
+              inputLastName.value,
+              inputEmail.value,
+              inputPassword.value
+            )
+          "
+        >
+          Add Customer
+        </button>
+        <button class="reset" type="reset" name="" id="">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>

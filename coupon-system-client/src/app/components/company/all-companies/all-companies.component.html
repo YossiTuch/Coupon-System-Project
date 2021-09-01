@@ -1,0 +1,28 @@
+<div class="header-container">
+
+    <h2>Companies</h2>
+
+</div>
+<ng-template #loading>
+    <img src="../../../assets/gifs/loading-buffering1.gif" alt="buffering image">
+</ng-template>
+
+<div class="table-container">
+
+    <table *ngIf="companies;else loading">
+        <thead class="thead-style">
+            <tr>
+                <th>Id</th>              
+                <th>Name</th>              
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of companies" routerLink="/welcome/company-details/{{c.id}}">
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

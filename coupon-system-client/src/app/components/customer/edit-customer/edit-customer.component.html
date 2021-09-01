@@ -1,0 +1,70 @@
+<div class="main-container">
+    <div class="header-container">
+      <h2>Edit Customer</h2>
+    </div>
+  
+    <div class="edit_customer_container">
+      <form #formInfo="ngForm" action="">
+        <div class="row">
+            <label for="first_name_input">First Name: </label>
+            <input
+            required
+              #inputFirst
+              type="text"
+              name="customer-first-name"
+              class="input-customer-first-name"
+              value="{{customer.firstName}}"      
+              id="input-customer-first-name"
+            />
+          </div>
+          <div class="row">
+            <label for="last_name_input">Last Name: </label>
+            <input
+            required
+              #inputLast
+              type="text"
+              name="customer-last-name"
+              class="input-customer-last-name"    
+              value="{{customer.lastName}}"
+              id="input-customer-last-name"
+            />
+          </div>
+     
+        <div class="row">
+          <label for="email_input">Customer Email: </label>
+          <input
+          required
+            #inputEmail
+            type="email"
+            name="customer-email"
+            class="input-customer-email"
+            value="{{customer.email}}"
+            id="input-customer-email"
+          />
+        </div>
+        <div class="row">
+            <label for="password_input">Customer Password: </label>
+            <input
+            required
+              #inputPass
+              type="text"
+              name="customer-password"
+              class="input-customer-passowrd"
+              value="{{customer.password}}"
+              id="input-customer-password"
+            />
+          </div>
+        <div class="row">
+          <button
+          [disabled]="!formInfo.valid"
+          [textContent]="!formInfo.valid ? 'Invalid Form' : 'Update'"
+            class="btn-upd"
+            name="btn-upd"
+            id="btn-upd"          
+            (click)="update(inputFirst.value, inputLast.value ,inputEmail.value ,inputPass.value )">    
+            Update
+          </button>     
+        </div>
+      </form>
+    </div>
+  </div>

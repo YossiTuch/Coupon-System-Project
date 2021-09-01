@@ -1,0 +1,41 @@
+<div class="main-container">
+  <div class="header-container">
+    <h2>Find Customer</h2>
+  </div>
+  <div class="find_customer_container">
+    <form #formInfo="ngForm" action="">
+      <div class="row">
+        <label for="id_input">Customer Id: </label>
+        <input
+          #inputId   
+          type="number"
+          name="customer-password"
+          class="input-customer-id"
+          placeholder="Id"
+          id="input-customer-id"
+          value="0"
+        />
+      </div>
+      <!-- <div class="row">
+        <label for="email_input">Customer Email: </label>
+        <input
+          #inputEmail
+          type="email"
+          name="customer-email"
+          class="input-customer-email"
+          placeholder="Email"
+          id="input-customer-email"
+        />
+      </div> -->
+      <div class="row">
+        <button
+          class="btn-add"
+          name="btn-add"
+          id="btn-add"          
+          (click)="goToDetails(inputId.value)">    
+          Find Customer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

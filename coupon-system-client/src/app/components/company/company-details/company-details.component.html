@@ -1,0 +1,28 @@
+<div *ngIf="company" class="company-details-container">
+    <div class="bg-container">
+      <app-company-logo></app-company-logo>     
+      <div class="details-container"></div>
+      <div class="id-con">Id: {{company.id}}</div>
+      <div class="email-con">Email: {{company.email}}</div>
+      <div class="name-con">Company name: {{company.name}}
+    </div>    
+  </div>
+  <div class="buttons">
+    <button
+    class="btn-upt"
+    name="btn-upt"
+    id="btn-upt"  
+    (click)="update()"  
+    >     
+    Edit
+  </button>
+  <button
+  class="btn-del"
+  name="btn-del"
+  id="btn-del"
+  (click)="delCompany()"
+  >   
+  Delete
+  </button>  
+  </div>
+  
