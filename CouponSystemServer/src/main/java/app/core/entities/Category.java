@@ -3,7 +3,7 @@ package app.core.entities;
 /**
  * This class represents the categories for the coupons.
  * 
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  *
  */
 public enum Category {

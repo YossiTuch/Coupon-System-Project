@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * This class represents the coupons.
  *
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  * 
  */
 @Entity

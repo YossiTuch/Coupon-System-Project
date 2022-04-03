@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 /**
  * This class represents the login manager for the system.
  *
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  *
  */
 

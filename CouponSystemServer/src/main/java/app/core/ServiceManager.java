@@ -31,6 +31,8 @@ public class ServiceManager {
     public CustomerService getCustomerService() {
         return new CustomerService();
     }
+
+
 //    @Bean
 //    public FilterRegistrationBean<LoginFilter> filterRegistrationBean(LoginFilter loginFilter){
 //        FilterRegistrationBean<LoginFilter> filterRegistrationBean = new FilterRegistrationBean<>();

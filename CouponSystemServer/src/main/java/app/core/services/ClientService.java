@@ -10,7 +10,7 @@ import app.core.repositories.CustomerRepository;
 /**
  * This class represents the super class of the clients of the system.
  * 
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  *
  */
 public abstract class ClientService {

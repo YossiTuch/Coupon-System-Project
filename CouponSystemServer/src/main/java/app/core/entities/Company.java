@@ -18,7 +18,7 @@ import javax.persistence.OneToMany;
 /**
  * This class represents the company Objects.
  * 
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  *
  */
 @Entity

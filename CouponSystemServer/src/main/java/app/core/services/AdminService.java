@@ -23,10 +23,9 @@ import app.core.exceptions.customerExceptions.CustomerNotFoundException;
 /**
  * This class represents the Admin Service
  * 
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  *
  */
-// need to change the delete and update to use the find method
 @Service
 @Transactional
 @Primary

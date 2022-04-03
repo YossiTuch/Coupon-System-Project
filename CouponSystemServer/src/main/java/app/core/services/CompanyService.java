@@ -25,7 +25,7 @@ import app.core.repositories.CouponRepository;
 /**
  * This class represents the company facade
  *
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  *
  */
 @Service

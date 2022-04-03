@@ -19,7 +19,7 @@ import javax.persistence.ManyToMany;
 /**
  * This class represents the customers.
  * 
- * @author Yossi and Avi Tuchband
+ * @author Yossi Toohband
  *
  */
 @Entity
